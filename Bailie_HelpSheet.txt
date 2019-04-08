@@ -1,0 +1,91 @@
+(Lab00)How to comment C++? //
+
+	How to comment Python code? #
+
+	What kind of file has extention ".md"? 
+		An MD file is a text file created using one of several possible dialects of the Markdown language. 
+		It is saved in plain text format but includes inline text symbols that define how to format the text 
+		(e.g., bold, indentations, headers, table formatting).
+
+(Lab02)How to Create an Object of type T and its Pointer?
+	When you create the node you are essentially creating its pointer at the same time.
+
+(Lab03)List the Python modules that you have imported in your Python experience, and what they contain. 
+		only used the operator module
+		
+
+	And answer this question: What is the class of the ops variable? 
+		operator
+
+	(Review Ch. 5 of the Tutorial.) And what are the other general-purpose built-in container data structures in Python?
+		list (as stacks and queues)
+		Tuples and Sequences
+
+(Lab04) How to declare a "record" structure in C++. (reference to juniata.edu)
+	C++ Records, aka structs, 
+	Record - a linear, direct-access data structure with heterogeneous components. 
+	Field or member - component of the record; each field has its own type. 
+	FieldName - the identifier used to refer to the field.
+	Records are implemented as classes in C++. 
+	
+(Lab05) Write down how to declare a binary tree (using the identfier "root" "left node" and "right node" and containing a datum) in both C++ and Python.	
+	C++: to declare a binary tree I would have a struct defined as a node
+		example of struct
+			struct node //(attribution https://www.cprogramming.com/tutorial/lesson18.html)
+			{
+			   int key_value;
+			   node *left;
+			   node *right;
+			}
+
+	Python: to declare a binary tree I would create a Node class where I assign a value to the node which produces a tree with
+		only a root node and I can edit the code to insert nodes in the future.	
+			example of Node Class
+			class Node: #(attribution https://www.tutorialspoint.com/python/python_binary_tree.htm)
+			
+				def _init_(self, data):
+				
+					self.left = None
+					self.right = None
+					self.data = data
+
+				def PrintTree(self):
+					print(self.data)
+
+			root = Node(13)
+			root.PrintTree()
+			#when I execute the code there result is 13 because there is only one node(the root node)
+				
+(Lab06) How do you declare a class in Python?	
+		class: blueprint created by programmer for an object defining a set of attributes that will characterize any object that is instantiated from the class
+		object: instance of a class or the realized version of the class, where a class is manifested in the program 
+		   (attribution: https://www.digitalocean.com/community/tutorials/how-to-construct-classes-and-define-objects-in-python-3)
+		
+		use class as keyword to define class and def as keyword to define functions of the class
+		example of the class Dog: (detailed beyond just the class for future reference)
+			class Dog:
+				def __init__(self, name):
+					self.name = name
+				def fetch(self):
+					print(self.name + " is playing fetch.")
+				def sleep(self):
+					print(self.name + " is sleeping.")
+			def main():
+				rueger = Dog("Rueger")
+				rueger.fetch()
+				boss = Dog("Boss Dog")
+				boss.sleep()
+			if __name__ == "__main__":
+				main()
+
+			#output of code execution 
+				Rueger is playing fetch.
+				Boss Dog is sleeping. 
+
+(Lab07) What is the drawback for the great speed of this type of data structure? (bit array) 
+		Space is a drawback of bit arrays because you need one more position in the array than that of the largest value in the array. 
+		Therefore, if you have a set consisting of 2,3,4,10^24 you will need 10^24 + 1 positions of space created in order to store 4 values. 
+		Now thats just silly and inefficient. 		
+			
+
+	
